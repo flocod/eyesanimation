@@ -5,6 +5,7 @@ let number =$(".key_val");
 let operator = $(".operator");
 let result = $("#result").get(0);
 let clear =$("#clear").get(0);
+let response =$("#response").get(0);
 
 resultDisplayed = false; // flag to keep an eye on what output is displayed
 
@@ -15,7 +16,7 @@ resultDisplayed = false; // flag to keep an eye on what output is displayed
 // adding click handlers to number buttons
 for (var i = 0; i < number.length; i++) {
     number[i].addEventListener("click", function(e) {
-  
+      $(".result").removeClass("active");
       // storing current input string and its last character in variables - used later
       var currentString = input.innerHTML;
       var lastChar = currentString[currentString.length - 1];
@@ -42,7 +43,7 @@ for (var i = 0; i < number.length; i++) {
   // adding click handlers to number buttons
   for (var i = 0; i < operator.length; i++) {
     operator[i].addEventListener("click", function(e) {
-  
+      $(".result").removeClass("active");
       // storing current input string and its last character in variables - used later
       var currentString = input.innerHTML;
       var lastChar = currentString[currentString.length - 1];
@@ -121,7 +122,10 @@ result.addEventListener("click", function() {
       add = operators.indexOf("+");
     }
   
-    input.innerHTML = numbers[0]; // displaying the output
+    // input.innerHTML = numbers[0]; // displaying the output
+  
+    response.innerHTML = numbers[0]; // displaying the output
+    $(".result").addClass("active");
   
     resultDisplayed = true; // turning flag if result is displayed
   });
@@ -129,4 +133,12 @@ result.addEventListener("click", function() {
   // clearing the input on press of clear
   clear.addEventListener("click", function() {
     input.innerHTML = "";
+    $(".result").removeClass("active");
+  })
+  // delete the input on press of delete
+  let deleted =$(".delete").get(0);
+  deleted.addEventListener("click", function() {
+    let delete_string =input.innerHTML;
+    input.innerHTML =delete_string.slice(0,-1);
+    $(".result").removeClass("active");
   })

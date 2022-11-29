@@ -126,7 +126,7 @@ a {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: calc(50vh);
+    height: calc(40vh  - 50px);
     box-shadow: var(--shadow-inset);
     border-radius: 0 0 50px 50px;
 
@@ -171,13 +171,13 @@ a {
         justify-content: space-between;
         align-items: baseline;
         width: 100%;
-        transform: translateY(-100%);
+        transform: translateY(-100%)  scaleY(4);
         transition: 0.5s;
       }
 
       .active {
-        transition: 0.5s;
-        transform: translateY(0%);
+        transition: 0.3s;
+        transform: translateY(0%) scaleY(1);
       }
     }
   }

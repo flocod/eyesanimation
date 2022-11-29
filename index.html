@@ -55,7 +55,7 @@
           <div class="result_side">
             <div class="result">
               <div class="egal">=</div>
-              <div class="response">500</div>
+              <div id="response" class="response">500</div>
             </div>
           </div>
         </div>
@@ -109,7 +109,9 @@
       $("#theme").click(function () {
         $("body").toggleClass("dark");
 
-        if (!$("body").hasClass("light")) {
+        setTimeout(function(){
+
+          if (!$("body").hasClass("dark")) {
             console.log("light");
             document
               .querySelector("meta[name='theme-color']")
@@ -121,6 +123,9 @@
               .setAttribute("content", "#1d1d1d");
           }
 
+
+        },0);
+        
       });
 
       // if ($("body").hasClass("light")) {
