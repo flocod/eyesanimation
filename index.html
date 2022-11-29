@@ -6,34 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator | Make simple Calculator</title>
-    <meta
-      name="keywords"
-      content="CIS, Centre, Formation, Professionnelle, Cameroun, Cameroon, Institut, Diplôme, Qualification, Attestation, MINEFOP, Ministère, Emploi, Stage, Placement, www.cisformation.com"
-    />
+    <!-- Primary Meta Tags -->
+    <title>Calculator | Online Calculator</title>
+    <meta name="title" content="Calculator | Online Calculator" />
     <meta
       name="description"
-      content="Anyone, from anyone advice to messages and many more, find here. Have fun and enjoy Anyone."
+      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
     />
 
-    <meta
-      name="thumbnail"
-      content="https://flocode.github.io/anyome/images/preview.jpg"
-    />
-    <meta property="og:site_name" content="Anyone" />
-    <meta property="og:title" content="Anyone | Send Message to anyone" />
-    <meta property="og:type" content="Education" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flocode.github.io/calculator/" />
+    <meta property="og:title" content="Calculator | Online Calculator" />
     <meta
       property="og:description"
-      content="Anyone, from anyone advice to messages and many more, find here. Have fun and enjoy Anyone."
+      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
     />
-    <meta property="og:url" content="https://www.cisformation.com" />
     <meta
       property="og:image"
-      content="https://flocode.github.io/anyome/images/preview.jpg"
+      content="https://flocode.github.io/calculator/images/calculator_icon.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://flocode.github.io/calculator/"
+    />
+    <meta property="twitter:title" content="Calculator | Online Calculator" />
+    <meta
+      property="twitter:description"
+      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
+    />
+    <meta
+      property="twitter:image"
+      content="https://flocode.github.io/calculator/images/calculator_icon.png"
     />
 
     <script
@@ -109,23 +116,19 @@
       $("#theme").click(function () {
         $("body").toggleClass("dark");
 
-        setTimeout(function(){
-
+        setTimeout(function () {
           if (!$("body").hasClass("dark")) {
             console.log("light");
             document
               .querySelector("meta[name='theme-color']")
               .setAttribute("content", "#fbfcff");
           } else {
-            console.log("dark")
+            console.log("dark");
             document
               .querySelector("meta[name='theme-color']")
               .setAttribute("content", "#1d1d1d");
           }
-
-
-        },0);
-        
+        }, 0);
       });
 
       // if ($("body").hasClass("light")) {
