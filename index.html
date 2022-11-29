@@ -1,16 +1,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="theme-color" content="#282a37">
+
+    <meta name="theme-color" content="#1d1d1d" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Anyone | Send Message to anyone
-    </title>
+    <title>Calculator | Make simple Calculator</title>
     <meta
       name="keywords"
       content="CIS, Centre, Formation, Professionnelle, Cameroun, Cameroon, Institut, Diplôme, Qualification, Attestation, MINEFOP, Ministère, Emploi, Stage, Placement, www.cisformation.com"
@@ -25,10 +24,7 @@
       content="https://flocode.github.io/anyome/images/preview.jpg"
     />
     <meta property="og:site_name" content="Anyone" />
-    <meta
-      property="og:title"
-      content="Anyone | Send Message to anyone"
-    />
+    <meta property="og:title" content="Anyone | Send Message to anyone" />
     <meta property="og:type" content="Education" />
     <meta
       property="og:description"
@@ -40,7 +36,10 @@
       content="https://flocode.github.io/anyome/images/preview.jpg"
     />
 
-    <!-- <script src="https://kit.fontawesome.com/e75ff8fc88.js" crossorigin="anonymous"></script> -->
+    <script
+      src="https://kit.fontawesome.com/e75ff8fc88.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="shortcut icon"
       href="https://flocode.github.io/anyome/images/favicon.png"
@@ -48,9 +47,56 @@
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="body theme">
+  <body class="body dark">
     <div class="main">
+      <div class="screen">
+        <div class="struct">
+          <div id="input" class="operation_side"></div>
+          <div class="result_side">
+            <div class="result">
+              <div class="egal">=</div>
+              <div class="response">500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="key_box">
+        <div class="struct">
+          <div class="keys_container">
+            <div id="clear" class="key orange">AC</div>
+            <div id="theme" class="key low_turquoise">
+              <!-- ◐ -->
+              <span>☀</span>
+            </div>
+            <div class="key low_turquoise operator">%</div>
+            <div class="key turquoise operator">÷</div>
 
+            <div class="key key_val">1</div>
+            <div class="key key_val">2</div>
+            <div class="key key_val">3</div>
+            <div class="key turquoise operator">&times;</div>
+
+            <div class="key key_val">4</div>
+            <div class="key key_val">5</div>
+            <div class="key key_val">6</div>
+            <div class="key turquoise operator">-</div>
+
+            <div class="key key_val">7</div>
+            <div class="key key_val">8</div>
+            <div class="key key_val">9</div>
+            <div class="key turquoise operator">+</div>
+
+            <div class="key3">
+              <div class="key delete">⟵</div>
+              <div class="key key_val">0</div>
+              <div class="key point_key key_val">.</div>
+            </div>
+            <div id="result" class="key egale_key orange">
+              <div class="egale">=</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -59,5 +105,33 @@
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      $("#theme").click(function () {
+        $("body").toggleClass("dark");
+
+        if (!$("body").hasClass("light")) {
+            console.log("light");
+            document
+              .querySelector("meta[name='theme-color']")
+              .setAttribute("content", "#fbfcff");
+          } else {
+            console.log("dark")
+            document
+              .querySelector("meta[name='theme-color']")
+              .setAttribute("content", "#1d1d1d");
+          }
+
+      });
+
+      // if ($("body").hasClass("light")) {
+      //   document
+      //     .querySelector("meta[name='theme-color']")
+      //     .setAttribute("content", "#1d1d1d");
+      // } else {
+      //   document
+      //     .querySelector("meta[name='theme-color']")
+      //     .setAttribute("content", "#fbfcff");
+      // }
+    </script>
   </body>
 </html>
