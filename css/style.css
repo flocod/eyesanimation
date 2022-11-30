@@ -45,12 +45,6 @@ Black 900
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media all and (max-width: 430px) {
-  .body {
-    height: calc(100vh - 50px);
-    background: var(--fond);
-  }
-}
 
 * {
   outline: none;
@@ -111,7 +105,7 @@ a :hover {
 @media all and (max-width: 430px) {
   .main {
     min-width: 100%;
-    height: calc(100vh - 50px);
+    height: 100vh;
     background: var(--fond);
   }
 }
@@ -132,15 +126,10 @@ a :hover {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  height: calc(40vh - 50px);
+  height: 40vh;
   -webkit-box-shadow: var(--shadow-inset);
           box-shadow: var(--shadow-inset);
   border-radius: 0 0 50px 50px;
-}
-@media all and (max-width: 430px) {
-  .main .screen {
-    height: calc(40vh - 50px);
-  }
 }
 .main .screen .operation_side {
   height: 70%;
@@ -167,6 +156,12 @@ a :hover {
     font-weight: 300;
   }
 }
+@media all and (max-width: 335px) {
+  .main .screen .operation_side {
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
 .main .screen .result_side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,6 +184,12 @@ a :hover {
     font-weight: 500;
   }
 }
+@media all and (max-width: 335px) {
+  .main .screen .result_side {
+    font-size: 1.9em;
+    font-weight: 300;
+  }
+}
 .main .screen .result_side .result {
   height: 100%;
   width: 100%;
@@ -202,16 +203,16 @@ a :hover {
       -ms-flex-align: baseline;
           align-items: baseline;
   width: 100%;
-  -webkit-transform: translateY(-100%) scaleY(4);
-          transform: translateY(-100%) scaleY(4);
+  -webkit-transform: translateY(-250%);
+          transform: translateY(-250%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .main .screen .result_side .active {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: translateY(0%) scaleY(1);
-          transform: translateY(0%) scaleY(1);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 .main .key_box {
   display: -webkit-box;
@@ -227,11 +228,6 @@ a :hover {
   margin-top: 30px;
   height: 60vh;
   overflow: hidden;
-}
-@media all and (max-width: 430px) {
-  .main .key_box {
-    height: calc(60vh - 50px);
-  }
 }
 .main .key_box .keys_container {
   display: -webkit-box;
@@ -264,6 +260,22 @@ a :hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media all and (max-height: 981px) {
+  .main .key_box .keys_container .key {
+    height: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+.main .key_box .keys_container .key_val:active {
+  background: #fe9900;
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 0.9em;
 }
 .main .key_box .keys_container .key3 {
   width: 65%;
@@ -297,6 +309,22 @@ a :hover {
       -ms-user-select: none;
           user-select: none;
   line-height: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media all and (max-width: 430px) and (max-height: 807px) {
+  .main .key_box .keys_container .key3 .key {
+    height: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+.main .key_box .keys_container .key3 .key:active {
+  font-size: 0.9em;
+  background: #fe9900;
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .main .key_box .keys_container .key3 .point_key {
   display: -webkit-box;
@@ -311,6 +339,30 @@ a :hover {
   line-height: 0px;
   width: 30px;
   height: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.main .key_box .keys_container .key3 .point_key:active {
+  font-size: 0.9em;
+  background: #fe9900;
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.main .key_box .keys_container .delete {
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.main .key_box .keys_container .delete:active {
+  font-size: 0.9em;
+  background: crimson !important;
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .main .key_box .keys_container .egale_key {
   position: absolute;
@@ -319,17 +371,23 @@ a :hover {
   border: 1px solid var(--fond);
   -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
           box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
-  -webkit-transform: translateY(50%) translateX(25%);
-          transform: translateY(50%) translateX(25%);
+  -webkit-transform: translateY(30%) translateX(25%);
+          transform: translateY(30%) translateX(25%);
   z-index: 10;
   width: 23vh;
   height: 23vh;
   border-radius: 50%;
 }
-@media all and (max-height: 850px) {
+@media all and (max-height: 981px) {
   .main .key_box .keys_container .egale_key {
-    width: 20vh;
-    height: 20vh;
+    width: 18vh;
+    height: 18vh;
+  }
+}
+@media all and (max-height: 516px) {
+  .main .key_box .keys_container .egale_key {
+    width: 15vh;
+    height: 15vh;
   }
 }
 .main .key_box .keys_container .egale_key .egale {

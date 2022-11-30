@@ -46,10 +46,11 @@ Black 900
   display: flex;
   justify-content: center;
 
-  @media all and (max-width: 430px) {
-    height: calc(100vh - 50px);
-    background: var(--fond);
-  }
+  // @media all and (max-width: 430px) {
+  //   height: calc(100vh - 50px);
+  //   background: var(--fond);
+  // }
+
 }
 
 * {
@@ -109,9 +110,13 @@ a {
 
   @media all and (max-width: 430px) {
     min-width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh);
     background: var(--fond);
   }
+
+  // @media all and (max-width: 430px) or (max-height: 500px) {
+  //   height: calc(100vh);
+  // }
 
   .struct {
     display: block;
@@ -126,13 +131,13 @@ a {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: calc(40vh  - 50px);
+    height: calc(40vh);
     box-shadow: var(--shadow-inset);
     border-radius: 0 0 50px 50px;
 
-    @media all and (max-width: 430px) {
-      height: calc(40vh - 50px);
-    }
+    // @media all and (max-width: 430px) {
+    //   height: calc(40vh - 50px);
+    // }
 
     .operation_side {
       height: $operation_side_height;
@@ -146,6 +151,10 @@ a {
 
       @media all and (max-width: 430px) {
         font-size: 2.5em;
+        font-weight: 300;
+      }
+      @media all and (max-width: 335px) {
+        font-size: 2em;
         font-weight: 300;
       }
     }
@@ -164,6 +173,11 @@ a {
         font-weight: 500;
       }
 
+      @media all and (max-width: 335px) {
+        font-size: 1.9em;
+        font-weight: 300;
+      }
+
       .result {
         height: 100%;
         width: 100%;
@@ -171,13 +185,13 @@ a {
         justify-content: space-between;
         align-items: baseline;
         width: 100%;
-        transform: translateY(-100%)  scaleY(4);
+        transform: translateY(-250%);
         transition: 0.5s;
       }
 
       .active {
         transition: 0.3s;
-        transform: translateY(0%) scaleY(1);
+        transform: translateY(0%);
       }
     }
   }
@@ -190,9 +204,9 @@ a {
     margin-top: 30px;
     height: calc(60vh);
     overflow: hidden;
-    @media all and (max-width: 430px) {
-      height: calc(60vh - 50px);
-    }
+    // @media all and (max-width: 430px) {
+    //   height: calc(60vh - 50px);
+    // }
 
     .keys_container {
       display: flex;
@@ -213,7 +227,27 @@ a {
         // box-shadow: 2px 2px 4px var(--shade);
         border-radius: 25px;
         user-select: none;
+        transition: 0.3s;
+
+        @media all and  (max-height: 981px) {
+          height: 5vh;
+          margin-bottom: 5vh;
+         
+        }
+
       }
+
+
+      .key_val{
+        &:active{
+          background: #fe9900;
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          transition: 0.3s;
+          font-size: .9em;
+        }
+      }
+
+
 
       .key3 {
         width: 65%;
@@ -232,6 +266,20 @@ a {
           border-radius: 25px;
           user-select: none;
           line-height: 0px;
+          @media all and (max-width: 430px) and (max-height: 807px) {
+            height: 5vh;
+            margin-bottom: 5vh;
+           
+          }
+
+          transition: 0.3s;
+          &:active{
+            font-size: .9em;
+            background: #fe9900;;
+            box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+            transition: 0.3s;
+          }
+
         }
 
         .point_key {
@@ -241,6 +289,26 @@ a {
           line-height: 0px;
           width: 30px;
           height: 40px;
+
+          transition: 0.3s;
+        &:active{
+          font-size: .9em;
+          background: #fe9900;;
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          transition: 0.3s;
+        }
+        }
+      }
+
+
+      .delete{
+        box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+        transition: 0.3s;
+        &:active{
+          font-size: .9em;
+          background: crimson !important;
+          box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
+          transition: 0.3s;
         }
       }
 
@@ -253,13 +321,21 @@ a {
 
         border: 1px solid var(--fond);
         box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.486);
-        transform: translateY(50%) translateX(25%);
+        transform: translateY(30%) translateX(25%);
         z-index: 10;
         width: $egale_key_height;
         height: $egale_key_height;
 
-        @media all and (max-height: 850px) {
-          $egale_key_height: 20vh;
+
+        
+
+        @media all and (max-height: 981px) {
+          $egale_key_height: 18vh;
+          width: $egale_key_height;
+          height: $egale_key_height;
+        }
+        @media all and (max-height: 516px) {
+          $egale_key_height: 15vh;
           width: $egale_key_height;
           height: $egale_key_height;
         }
