@@ -6,46 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator | Make simple Calculator</title>
-    <meta
-      name="keywords"
-      content="CIS, Centre, Formation, Professionnelle, Cameroun, Cameroon, Institut, Diplôme, Qualification, Attestation, MINEFOP, Ministère, Emploi, Stage, Placement, www.cisformation.com"
-    />
+    <!-- Primary Meta Tags -->
+    <title>Calculator | Online Calculator</title>
+    <meta name="title" content="Calculator | Online Calculator" />
     <meta
       name="description"
-      content="Anyone, from anyone advice to messages and many more, find here. Have fun and enjoy Anyone."
+      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
     />
 
-    <meta
-      name="thumbnail"
-      content="https://flocode.github.io/anyome/images/preview.jpg"
-    />
-    <meta property="og:site_name" content="Anyone" />
-    <meta property="og:title" content="Anyone | Send Message to anyone" />
-    <meta property="og:type" content="Education" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flocod.github.io/calculator/" />
+    <meta property="og:title" content="Calculator | Online Calculator" />
     <meta
       property="og:description"
-      content="Anyone, from anyone advice to messages and many more, find here. Have fun and enjoy Anyone."
+      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
     />
-    <meta property="og:url" content="https://www.cisformation.com" />
     <meta
       property="og:image"
-      content="https://flocode.github.io/anyome/images/preview.jpg"
+      content="https://flocod.github.io/calculator/images/preview.jpg?v=2"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://flocod.github.io/calculator/"
+    />
+    <meta property="twitter:title" content="Calculator | Online Calculator" />
+    <meta
+      property="twitter:description"
+      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
+    />
+    <meta
+      property="twitter:image"
+      content="https://flocod.github.io/calculator/images/preview.jpg?v=2"
     />
 
     <script
       src="https://kit.fontawesome.com/e75ff8fc88.js"
       crossorigin="anonymous"
     ></script>
-    <link
+    <!-- <link
       rel="shortcut icon"
-      href="https://flocode.github.io/anyome/images/favicon.png"
+      href="https://flocod.github.io/anyome/images/favicon.png"
       type="image/x-icon"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+    /> -->
+    <link rel="stylesheet" href="css/style.css?v=2" />
   </head>
   <body class="body dark">
     <div class="main">
@@ -55,7 +62,7 @@
           <div class="result_side">
             <div class="result">
               <div class="egal">=</div>
-              <div class="response">500</div>
+              <div id="response" class="response">500</div>
             </div>
           </div>
         </div>
@@ -104,23 +111,24 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js?v=2"></script>
     <script>
       $("#theme").click(function () {
         $("body").toggleClass("dark");
 
-        if (!$("body").hasClass("light")) {
+        setTimeout(function () {
+          if (!$("body").hasClass("dark")) {
             console.log("light");
             document
               .querySelector("meta[name='theme-color']")
               .setAttribute("content", "#fbfcff");
           } else {
-            console.log("dark")
+            console.log("dark");
             document
               .querySelector("meta[name='theme-color']")
               .setAttribute("content", "#1d1d1d");
           }
-
+        }, 0);
       });
 
       // if ($("body").hasClass("light")) {
