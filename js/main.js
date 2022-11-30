@@ -4,7 +4,7 @@ let operator = $(".operator");
 let result = $("#result").get(0);
 let clear =  $("#clear").get(0);
 let response = $("#response").get(0);
-let response = $("#response").get(0);
+
 
 resultDisplayed = false; // flag to keep an eye on what output is displayed
 
