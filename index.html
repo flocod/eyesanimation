@@ -2,16 +2,16 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="theme-color" content="#1d1d1d" />
+    <meta name="theme-color" content="black" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
-    <title>Calculator | Online Calculator</title>
-    <meta name="title" content="Calculator | Online Calculator" />
+    <title>Eyes | Animation</title>
+    <meta name="title" content="Eyes | Animation" />
     <meta
       name="description"
-      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
+      content="eyes animations."
     />
 
     <!-- Open Graph / Facebook -->
@@ -20,7 +20,7 @@
     <meta property="og:title" content="Calculator | Online Calculator" />
     <meta
       property="og:description"
-      content="A beautiful, free online calculator , we can make addition, soustraction multiplication, division and we can  choose between light and dark theme."
+      content="eyes animations."
     />
     <meta
       property="og:image"
@@ -56,54 +56,20 @@
   </head>
   <body class="body dark">
     <div class="main">
-      <div class="screen">
-        <div class="struct">
-          <div id="input" class="operation_side"></div>
-          <div class="result_side">
-            <div class="result">
-              <div class="egal">=</div>
-              <div id="response" class="response">500</div>
-            </div>
-          </div>
+     
+
+      <div class="face">
+        <div class="eye">
+          <div class="paupiere"></div>
+          <div class="cristalin"></div>
+        </div>
+        <div class="eye">
+          <div class="paupiere"></div>
+          <div class="cristalin"></div>
         </div>
       </div>
-      <div class="key_box">
-        <div class="struct">
-          <div class="keys_container">
-            <div id="clear" class="key orange">AC</div>
-            <div id="theme" class="key low_turquoise">
-              <!-- ◐ -->
-              <span>☀</span>
-            </div>
-            <div class="key low_turquoise operator">%</div>
-            <div class="key turquoise operator">÷</div>
 
-            <div class="key key_val">1</div>
-            <div class="key key_val">2</div>
-            <div class="key key_val">3</div>
-            <div class="key turquoise operator">&times;</div>
-
-            <div class="key key_val">4</div>
-            <div class="key key_val">5</div>
-            <div class="key key_val">6</div>
-            <div class="key turquoise operator">-</div>
-
-            <div class="key key_val">7</div>
-            <div class="key key_val">8</div>
-            <div class="key key_val">9</div>
-            <div class="key turquoise operator">+</div>
-
-            <div class="key3">
-              <div class="key delete">⟵</div>
-              <div class="key key_val">0</div>
-              <div class="key point_key key_val">.</div>
-            </div>
-            <div id="result" class="key egale_key orange">
-              <div class="egale">=</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
 
     <script
@@ -111,35 +77,11 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="js/main.js?v=3"></script>
     <script>
-      $("#theme").click(function () {
-        $("body").toggleClass("dark");
+    
 
-        setTimeout(function () {
-          if (!$("body").hasClass("dark")) {
-            console.log("light");
-            document
-              .querySelector("meta[name='theme-color']")
-              .setAttribute("content", "#fbfcff");
-          } else {
-            console.log("dark");
-            document
-              .querySelector("meta[name='theme-color']")
-              .setAttribute("content", "#1d1d1d");
-          }
-        }, 0);
-      });
-
-      // if ($("body").hasClass("light")) {
-      //   document
-      //     .querySelector("meta[name='theme-color']")
-      //     .setAttribute("content", "#1d1d1d");
-      // } else {
-      //   document
-      //     .querySelector("meta[name='theme-color']")
-      //     .setAttribute("content", "#fbfcff");
-      // }
     </script>
   </body>
 </html>
